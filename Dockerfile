@@ -56,11 +56,7 @@ RUN set -x \
  && sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/mysql.conf.d/mysqld.cnf \
  && rm -rf /var/lib/mysql && mkdir -p /var/lib/mysql /var/run/mysqld \
  && chown -R mysql:mysql /var/lib/mysql /var/run/mysqld \
- && chmod 777 /var/run/mysqld \
- && service mysql start \
- && mysqladmin -u root password root \
- && mysql -uroot -proot -e \
-    "CREATE DATABASE project DEFAULT CHARACTER SET utf8; grant all privileges on project.* to project@'%' identified by 'project';" \
+ && chmod 777 /var/run/mysqld 
 #########mysql########
 
 ADD ./ /laravel
