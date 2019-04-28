@@ -65,6 +65,7 @@ WORKDIR /laravel
 
 EXPOSE 3306
 EXPOSE 80
+EXPOSE 443
 
 CMD ["bash", "deploy.sh"]
 
