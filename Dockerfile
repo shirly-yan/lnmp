@@ -8,7 +8,9 @@ RUN set -x \
  && apt-get install -y --allow-unauthenticated mysql-server \
  && sed -i 's/^\(bind-address\s.*\)/# \1/' /etc/mysql/mysql.conf.d/mysqld.cnf \
  && service mysql start \
- && mysqladmin -u root password root
+ && mysqladmin -u root password root \
+ && mysql -uroot -proot -e \
+    "CREATE DATABASE project DEFAULT CHARACTER SET utf8; grant all privileges on project.* to project@'%' identified by 'project';"
 #########mysql########
 
 ########nginx########
