@@ -2,6 +2,12 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
+########nginx########
+RUN set -x \
+ && apt-get update \
+ && apt-get install -y nginx vim curl
+########nginx########
+
 #########redis########
 RUN set -x \
  && apt-get update \
