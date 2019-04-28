@@ -2,6 +2,12 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
+#########redis########
+RUN set -x \
+ && apt-get update \
+ && apt-get install -yq --no-install-recommends redis-server
+#########redis########
+
 ########mysql########
 RUN set -x \
  && apt-get update \

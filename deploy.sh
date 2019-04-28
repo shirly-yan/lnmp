@@ -3,7 +3,7 @@
 chown -R mysql:mysql /var/lib/mysql
 service mysql start
 
-# redis-server ./redis.conf
+redis-server ./redis.conf
 
 # service php7.2-fpm start
 
