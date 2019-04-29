@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 service mysql start
 
 redis-server ./redis.conf
