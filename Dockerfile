@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+MAINTAINER shirly "yqzh186@163.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -70,7 +71,7 @@ EXPOSE 3306
 EXPOSE 80
 EXPOSE 443
 
-CMD ["bash", "deploy.sh"]
+CMD ["bash", "/config_file/deploy.sh"]
 
 
 
