@@ -8,7 +8,8 @@ docker run \
 --publish 1080:80 --publish 1443:443 --publish 3333:3306 \
 --name lnmp2 \
 --restart always \
-daocloud.io/shirly/lnmp:release_2
+daocloud.io/shirly/lnmp:release_2 \
+-it bash
 
 创建文件夹
 mkdir /lnmp
@@ -24,6 +25,6 @@ docker run \
 --name lnmp2 \
 --restart always \
 --volume /lnmp/code:/code \
---volume /lnmp/msyql:/var/lib/mysql \
+--volume /lnmp/mysql:/var/lib/mysql \
 daocloud.io/shirly/lnmp:release_2
 

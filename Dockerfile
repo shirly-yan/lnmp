@@ -16,7 +16,7 @@ RUN set -x \
 ########nginx########
 RUN set -x \
  && apt-get update \
- && apt-get install -y nginx vim curl
+ && apt-get install -y nginx vim curl git
 ########nginx########
 
 #########php########
