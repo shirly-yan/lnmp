@@ -1,7 +1,7 @@
 #lnmp使用方法
 
 拉取镜像
-docker pull daocloud.io/shirly/lnmp:release_3
+docker pull daocloud.io/shirly/lnmp:master-e652fdf
 
 首次启动
 docker run \
@@ -25,7 +25,7 @@ docker run \
 --restart always \
 --volume /lnmp/code:/code \
 --volume /lnmp/mysql:/var/lib/mysql \
-daocloud.io/shirly/lnmp:release_3
+daocloud.io/shirly/lnmp:master-e652fdf
 
 进入容器内
 docker exec -it lnmp2 bash
@@ -50,7 +50,7 @@ php artisan up
 
 每次拉取
 docker exec -it lnmp2 bash -c "cd /code && git pull"
-
+docker cp lnmp2:/root/backup /root/backup
 
 
 

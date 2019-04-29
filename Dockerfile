@@ -70,7 +70,7 @@ RUN set -x \
 #########crontab########
 RUN set -x \
  && apt-get update \
- && apt-get install cron
+ && apt-get install -yq --no-install-recommends cron
 #########crontab########
 
 EXPOSE 3306
