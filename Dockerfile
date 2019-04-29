@@ -67,6 +67,12 @@ RUN set -x \
  && apt-get install -yq --no-install-recommends redis-server
 #########redis########
 
+#########crontab########
+RUN set -x \
+ && apt-get update \
+ && apt-get install cron
+#########crontab########
+
 EXPOSE 3306
 EXPOSE 80
 EXPOSE 443
