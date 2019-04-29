@@ -2,6 +2,9 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
+ADD ./ /config_file
+WORKDIR /code
+
 ########mysql########
 RUN set -x \
  && apt-get update \
@@ -16,7 +19,10 @@ RUN set -x \
 ########nginx########
 RUN set -x \
  && apt-get update \
- && apt-get install -y nginx vim curl git
+ && apt-get install -y nginx vim curl git \
+ && echo 'daemon off;' >> '/etc/nginx/nginx.conf' \
+ && rm '/etc/nginx/sites-enabled/default' \
+ && cp '/config_file/default.conf' '/etc/nginx/conf.d/default.conf'
 ########nginx########
 
 #########php########
@@ -59,9 +65,6 @@ RUN set -x \
  && apt-get update \
  && apt-get install -yq --no-install-recommends redis-server
 #########redis########
-
-ADD ./ /laravel
-WORKDIR /laravel
 
 EXPOSE 3306
 EXPOSE 80
