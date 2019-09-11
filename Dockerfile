@@ -46,7 +46,7 @@ RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.ph
 
 #########node########
 RUN set -x \
- && curl -sL https://deb.nodesource.com/setup_10.x \
+ && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
  && apt-get install -y nodejs
 #########node########
 
