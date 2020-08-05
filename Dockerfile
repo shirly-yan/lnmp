@@ -15,8 +15,6 @@ RUN set -x \
  && cp '/config_file/default.conf' '/etc/nginx/conf.d/default.conf'
 ########nginx########
 
-
-
 #########php########
 RUN set -x \
  && apt-get update \
@@ -31,7 +29,7 @@ RUN set -x \
                                             php7.4-mbstring \
                                             php7.4-curl \
                                             php7.4-xml \
-                                            php7.4-pear \
+                                            php-pear \
                                             php7.4-bcmath
 #########php########
 
