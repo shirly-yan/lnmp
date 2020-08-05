@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER shirly "yqzh186@163.com"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -15,25 +15,24 @@ RUN set -x \
  && cp '/config_file/default.conf' '/etc/nginx/conf.d/default.conf'
 ########nginx########
 
+
+
 #########php########
 RUN set -x \
  && apt-get update \
- && apt-get install -yq --no-install-recommends php7.4-cli \
-    libapache2-mod-php7.4 \
-    php7.4-json \
-    php7.4-curl \
-    php7.4-fpm \
-    php7.4-gd \
-    php7.4-ldap \
-    php7.4-mbstring \
-    php7.4-mysql \
-    php7.4-soap \
-    php7.4-sqlite3 \
-    php7.4-xml \
-    php7.4-zip \
-    php7.4-intl \
-    php-imagick \
-    unzip
+ && apt-get install -yq --no-install-recommends php7.4 \
+                                            php7.4-cli \
+                                            php7.4-fpm \
+                                            php7.4-json \
+                                            php7.4-pdo \
+                                            php7.4-mysql \
+                                            php7.4-zip \
+                                            php7.4-gd \
+                                            php7.4-mbstring \
+                                            php7.4-curl \
+                                            php7.4-xml \
+                                            php7.4-pear \
+                                            php7.4-bcmath
 #########php########
 
 #########composer########
