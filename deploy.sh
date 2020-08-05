@@ -5,6 +5,6 @@ service mysql start
 
 redis-server /config_file/redis.conf
 
-service php7.2-fpm start
+service php7.4-fpm start
 
 service nginx start

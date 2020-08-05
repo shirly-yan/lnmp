@@ -18,20 +18,20 @@ RUN set -x \
 #########php########
 RUN set -x \
  && apt-get update \
- && apt-get install -yq --no-install-recommends php7.2-cli \
-    libapache2-mod-php7.2 \
-    php7.2-json \
-    php7.2-curl \
-    php7.2-fpm \
-    php7.2-gd \
-    php7.2-ldap \
-    php7.2-mbstring \
-    php7.2-mysql \
-    php7.2-soap \
-    php7.2-sqlite3 \
-    php7.2-xml \
-    php7.2-zip \
-    php7.2-intl \
+ && apt-get install -yq --no-install-recommends php7.4-cli \
+    libapache2-mod-php7.4 \
+    php7.4-json \
+    php7.4-curl \
+    php7.4-fpm \
+    php7.4-gd \
+    php7.4-ldap \
+    php7.4-mbstring \
+    php7.4-mysql \
+    php7.4-soap \
+    php7.4-sqlite3 \
+    php7.4-xml \
+    php7.4-zip \
+    php7.4-intl \
     php-imagick \
     unzip
 #########php########
